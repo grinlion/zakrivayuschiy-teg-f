@@ -25,7 +25,8 @@
     --background-image,
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a));
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a)
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -42,7 +43,7 @@
   background-color: var(--background-color, #fff);
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0px 24px;
   max-inline-size: 700px;
-  font-family: var(--accent-font, "PressStart2P",);
+  font-family: var(--accent-font, "PressStart2P");
 }
 
 .header__logo {
@@ -259,10 +260,21 @@
   inline-size: clamp(19.375rem, 17.071rem + 9.8305vw, 21.1875rem);
 }
 
-.subscribe-save-button {
+.popup-save-button {
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--button-text, #fff);
+}
+
+@supports ((
+  text-shadow:;
+:1pxvar(--label-color, #fff))or(-webkit-text-stroke: 1px var(--label-color, #fff))
+) {
+  .card__lbl {
+    text-shadow: none;
+    -webkit-text-shadow: 1px var(--label-color, #fff);
+    text-shadow: 1px var(--label-color, #fff);
+  }
 }
 
 @media (width < 376px) {
@@ -271,13 +283,13 @@
     min-height: 80px;
   }
 
-  .subscribe-save-button {
+  .popup-save-button {
     width: 28px;
     height: 28px;
   }
 }
 
-.subscribe-dialog {
+.popup-dialog {
   border: 2px solid var(--accent-color, #000);
   background-color: var(--background-color, #fff);
   color: var(--accent-color, #000);
@@ -286,23 +298,23 @@
   padding: 1.75rem;
 }
 
-.subscribe-dialog[open] {
+.popup-dialog[open] {
   display: flex;
 }
 
-.subscribe-dialog[open]::backdrop {
+.popup-dialog[open]::backdrop {
   background-color: var(--opacity-background, #000);
   opacity: 0.75;
 }
 
-.subscribe-content {
+.popup-content {
   display: flex;
   flex-direction: row-reverse;
   inline-size: clamp(16.0625rem, 13.2023rem + 12.2034vw, 18.3125rem);
   gap: 20px;
 }
 
-.subscribe-header {
+.popup-header {
   color: var(--accent-color, #000);
   font-family: var(--accent-font, "PressStart2P", fantasy);
   font-size: 14px;
@@ -313,12 +325,12 @@
   inline-size: clamp(12.375rem, 9.5148rem + 12.2034vw, 14.625rem);
 }
 
-.subscribe-form {
+.popup-form {
   display: flex;
   justify-content: center;
 }
 
-.subscribe-button {
+.popup-button {
   inline-size: 100%;
   text-transform: uppercase;
   padding: 10.5px 0 7px 0;
@@ -355,4 +367,3 @@
 .grayscale {
   filter: grayscale(50%) brightness(120%) contrast(150%);
 }
-
