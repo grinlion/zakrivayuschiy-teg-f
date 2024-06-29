@@ -187,7 +187,6 @@
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   color: var(--accent-color, #000);
-  cursor: pointer;
 }
 
 .button__text {
