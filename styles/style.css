@@ -43,7 +43,6 @@
   background-color: var(--background-color, #fff);
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0px 24px;
   max-inline-size: 700px;
-  font-family: var(--accent-font, "PressStart2P");
 }
 
 .header__logo {
