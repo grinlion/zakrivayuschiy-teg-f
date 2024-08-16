@@ -100,6 +100,7 @@
   bottom: -2px;
   transform-origin: left;
   transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -233,6 +234,7 @@
 .card__icon-button {
   display: flex;
   align-items: center;
+  transition: border 0.3s ease;
   background-color: var(--background-color, #fff);
   outline: 2px solid transparent;
   border: none;
@@ -242,7 +244,6 @@
 
 .card__icon-button:focus {
   outline: none;
-  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
@@ -268,9 +269,9 @@
   color: var(--button-text, #fff);
 }
 
-@supports ((
-  text-stroke:;
-:1pxvar(--label-color, #fff))or(-webkit-text-stroke: 1px var(--lbl-color, #fff))
+@supports (
+  (text-stroke: 1px var(--lbl-color, #fff)) or
+    (-webkit-text-stroke: 1px var(--lbl-color, #fff))
 ) {
   .card__lbl {
     text-shadow: none;
@@ -302,7 +303,6 @@
 
 .popup-dialog[open] {
   display: flex;
-  font-family: var(--accent-font, "PressStart2P", fantasy);
 }
 
 .popup-dialog[open]::backdrop {
