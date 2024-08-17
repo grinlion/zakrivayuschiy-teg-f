@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, "Inter", sans-serif);
-  font-variation-settings: "wght" var(--main-weight, 400);
+  font-variation-settings: var(--text-font-weight);
   color: var(--accent-color, #000);
   background-color: var(--background-color, #fff);
   background-image: var(
@@ -160,6 +160,7 @@
   right: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
   z-index: 1;
   text-shadow: 0 0 1px var(--lbl-color, #fff);
+
 }
 
 .card__text {
@@ -280,8 +281,12 @@
     text-stroke: 1px var(--lbl-color, #fff);
   }
 }
+ 
 
 @media (width < 376px) {
+  .popup-dialog[open] {
+  padding:32px 38px;
+}
   .card__save-button {
     flex-direction: column;
     min-height: 80px;
@@ -299,7 +304,7 @@
   color: var(--accent-color, #000);
   flex-direction: column;
   gap: 30px;
-  padding: 1.75rem;
+  padding: 30px 26px;
 }
 
 .popup-dialog[open] {
@@ -316,6 +321,7 @@
   flex-direction: row-reverse;
   inline-size: clamp(16.0625rem, 13.2023rem + 12.2034vw, 18.3125rem);
   gap: 20px;
+  align-items: center;
 }
 
 .popup-header {

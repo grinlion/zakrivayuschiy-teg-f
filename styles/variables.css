@@ -6,6 +6,8 @@
   --button-text: #fff;
   --background-color: #fff;
   --lbl-color: #fff;
+  --lbl-stroke-color: var(--text-color);
+  --lbl-stroke-color: var(--page-background);
   --accent-color: #000;
   --color-heart: #f00;
   --opacity-background: #000;
