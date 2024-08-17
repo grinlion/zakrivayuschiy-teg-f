@@ -17,7 +17,7 @@
 }
 
 :root.theme-dark {
-  --font-variation-settings: 465;
+  --text-font-weight: "wght" 465;
   --font-weight: 785;
   --button-text: #00cc14;
   --background-color: #000;
@@ -36,7 +36,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --font-variation-settings: 465;
+    --text-font-weight: "wght" 465;
     --font-weight: 785;
     --button-text: #00cc14;
     --background-color: #000;
